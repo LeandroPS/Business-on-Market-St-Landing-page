@@ -286,11 +286,11 @@ div.recent-works{
 
 div.infographic{
 	width: 100%;
-	height: 50px;
+	height: 60px;
 
 	text-align: center;
 	border-top: 3px solid;
-	padding: 5px;
+
 }
 
 	div.infographic a{
@@ -300,6 +300,7 @@ div.infographic{
 		font-size: 20pt;
 		background-color: green;
 		width: calc(100% - 10px);
+		margin: 5px;
 		display: block;
 	}
 
