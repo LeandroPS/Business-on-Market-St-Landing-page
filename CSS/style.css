@@ -1,9 +1,10 @@
 body{
-	
+	margin: 0px;
 }
 
 div.everything{
-	
+	max-width: 900px;
+	margin: 0px auto;
 }
 
 div.quotes{
@@ -11,55 +12,86 @@ div.quotes{
 }
 
 header{
-	
+	height: 50px;
+	width: 100%;
+	background-color: #fff;
 }
 
 	header img{
-		
+		float: left;
+		height: 40px;
+		margin-top: 5px;
+		margin-left: 15px;
 	}
 
 	header nav ul{
-		
+		margin: 0px;
+		float: right;
+		margin-right: 15px;
+		font-family: "Open Sans";
+		font-weight: 300;
+		font-size: 10pt;
 	}
 
 		header nav ul li{
-			
+			list-style: none;
+			float: left;
+			margin-left: 15px;
+			line-height: 50px;
 		}
 
-div.service-canvas{
+div.services-canvas{
+	width: 100%;
+	height: 375px;
+	background-color: blue;
+	position: relative;
 	
 }
 
-	div.service-canvas div.service-comment{
+	div.services-canvas div.service-comment{
+		background-color: white;
+		width: 300px;
+		height: 275px;
+		margin-top: 50px;
+		position: absolute;
+		right: 30px;
 		
 	}
 
 div.services{
-	
+	width: 100%;
+	height: 100px;
+	background-color: green;
 }
 
 	div.services ul{
-		
+		padding: 0px;
+		margin: 0px;
 	}
 
 		div.services ul li{
+			list-style: none;
 			
 		}
 
 div.recent-works{
+	background-color: grey;
+	position: relative;
 	
 }
 
 	div.recent-works>h1{
-		
+		position: relative;
+		margin-top: 0px;
 	}
 
-	div.recent-works ul{
-		
+	div.recent-works>ul{
+		margin: 0px;
+		padding: 0px;
 	}
 
-		div.recent-works ul li{
-			
+		div.recent-works>ul li{
+
 		}
 
 			div.recent-works ul li img{
@@ -79,7 +111,10 @@ div.recent-works{
 				}
 
 div.infographic{
-	
+	width: 100%;
+	height: 50px;
+	background-color: pink;
+	text-align: center;
 }
 
 	div.infographic a{
@@ -87,43 +122,56 @@ div.infographic{
 	}
 
 div.blog-multidisciplinary{
-	
+	background-color: yellow;
+	overflow: hidden;
 }
 
 	div.blog-multidisciplinary div.multidisciplinary{
-		
+		background-color: blue;
+		width:66%;
+		height: 200px;
+		float: left;
+		position: relative;
 	}
 
 		div.blog-multidisciplinary div.multidisciplinary div{
 			
 		}
 
-	div.blog-multidisciplinary div.multidisciplinary div.blog{
-			
+	div.blog-multidisciplinary div.blog{
+		background-color: red;
+		width: 33%;
+		height: 200px;
+		position: relative;
+		float: right;
 	}
 
-		div.blog-multidisciplinary div.multidisciplinary div.blog ul{
+		div.blog-multidisciplinary div.blog ul{
+			padding: 0px;
+			margin: 0px;
 			
 		}
 
-			div.blog-multidisciplinary div.multidisciplinary div.blog ul li{
-				
+			div.blog-multidisciplinary div.blog ul li{
+				list-style: none;
 			}
 
 footer{
-	
+	background-color: #252625;
+	text-align: center;
 }
 
 	footer img{
-		
+		margin-top: 15px;
 	}
 
 	footer address{
-		
+		color: #fff;
+		font-style: inherit;
 	}
 
 	footer ul.social{
-		
+		margin: 0px;
 	}
 
 		footer ul.social li{
