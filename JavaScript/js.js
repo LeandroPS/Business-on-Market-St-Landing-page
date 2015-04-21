@@ -1,5 +1,7 @@
 var Photos = ["Images/Canvas_Background/research.jpg","Images/Canvas_Background/brand.jpg","Images/Canvas_Background/web_development.jpg","Images/Canvas_Background/business.jpg","Images/Canvas_Background/marketing.jpg"];
 
+var Quotes = ["<span class='strong'>Build</span> your Business on a Solid Rock Foundation", "Get your brand <span class='strong'>moving</span>", "Refresh your <span class='strong'>online</span> presence", "Secure new <span class='strong'>streams of revenue</span>", "Increase your <span class='strong'>revenue</span> year by year"];
+
 function next(){
 	var este = $("div.services ul li.current");
 	indx = este.index();
@@ -30,6 +32,8 @@ $(function(){
 		
 		$("div.services-canvas img").removeClass("current");
 		$("div.services-canvas img:eq("+indx+")").addClass("current");
+		
+		$("div.services-canvas div.service-comment p").html(Quotes[indx]);
 		///
 		
 		$("div.services ul li").removeClass("current");

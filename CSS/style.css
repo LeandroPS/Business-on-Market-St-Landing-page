@@ -118,6 +118,26 @@ div.services-canvas{
 		float: right;
 		
 	}
+		div.services-canvas div.service-comment p{
+			padding: 35px 30px;
+			font-family: Open Sans, sans-serif;
+			text-transform: uppercase;
+			
+		}
+
+			div.services-canvas div.service-comment p span.strong{
+				width: 100%;
+				display: block;
+				text-align: center;
+				font-size: 30pt;
+				font-weight: 700;
+				border-width: 3px;
+				border-style: solid none;
+				border-color: #000;
+				color: #7E1519;
+				
+			}
+
 
 div.services{
 	width: 100%;
@@ -245,12 +265,21 @@ div.recent-works{
 			border-radius: 8px;
 		}
 
-			div.recent-works ul li img{
+			div.recent-works ul li div.img{
 				background: yellow;
 				width: 100%;
 				height: 100px;
 				border-radius: 8px;
+				position: relative;
+				overflow: hidden;
 			}
+
+				div.recent-works ul li div.img img{
+					width: 100%;
+					position: absolute;
+					top: 50%;
+  					transform: translateY(-50%);
+				}
 
 			div.recent-works ul li h1{
 				position: relative;
@@ -313,9 +342,11 @@ div.infographic{
 	div.infographic a{
 		line-height: 50px;
 		font-family: Open Sans, sans-serif;
+		font-weight: 300;
 		text-decoration: none;
 		font-size: 20pt;
-		background-color: green;
+		background-color: white;
+  		color: #000;
 		width: calc(100% - 10px);
 		margin: 5px;
 		display: block;
@@ -387,15 +418,25 @@ div.blog-multidisciplinary{
 					border-color: grey;
 				}
 
-				div.blog-multidisciplinary div.blog ul li img{
+				div.blog-multidisciplinary div.blog ul li div.img{
 					background: grey;
 					height: 100px;
 					width: 100px;
 					float: left;
+					display: inline-block;
+					position: relative;
 					margin-left: 5px;
 					margin-right: 5px;
-					
+					text-align: center;
+					overflow: hidden;
 				}
+
+					div.blog-multidisciplinary div.blog ul li img{
+						height: 100%;
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
+					}
 
 				div.blog-multidisciplinary div.blog ul li h1{
 					position: relative;
@@ -403,6 +444,15 @@ div.blog-multidisciplinary{
 					font-family: Open Sans, sans-serif;
 					font-size: 14pt;
 				}
+
+					div.blog-multidisciplinary div.blog ul li h1 a{
+						color: #000;
+						text-decoration: none;
+					}
+
+					div.blog-multidisciplinary div.blog ul li h1 a:hover{
+						text-decoration: underline;
+					}
 
 				div.blog-multidisciplinary div.blog ul li span.when{
 					font-family: Open Sans, sans-serif;
