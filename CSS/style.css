@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body{
 	margin: 0px;
 }
@@ -8,8 +17,27 @@ div.everything{
 }
 
 div.quotes{
+	position: relative;
 	
 }
+
+	div.quotes:before{
+		font: normal normal normal 64px/1 FontAwesome;
+		content: "\f10d";
+		float: left;
+		position: absolute;
+		margin-top: -25px;
+		margin-left: -25px;
+	}
+
+	div.quotes:after{
+		font: normal normal normal 64px/1 FontAwesome;
+		content: "\f10e";
+		float: right;
+		position: absolute;
+		bottom: -25px;
+		right: -25px;
+	}
 
 header{
 	height: 50px;
@@ -45,6 +73,7 @@ div.services-canvas{
 	height: 375px;
 	background-color: blue;
 	position: relative;
+	overflow: auto;
 	
 }
 
@@ -53,8 +82,9 @@ div.services-canvas{
 		width: 300px;
 		height: 275px;
 		margin-top: 50px;
-		position: absolute;
-		right: 30px;
+		position: relative;
+		margin-right: 30px;
+		float: right;
 		
 	}
 
@@ -67,10 +97,19 @@ div.services{
 	div.services ul{
 		padding: 0px;
 		margin: 0px;
+		display: flex;
+		display: -moz-box;
+		justify-content: space-around;
+		
 	}
 
 		div.services ul li{
 			list-style: none;
+			background-color: red;
+			width: 50px;
+			height: 50px;
+			float: left;
+			position: absolute;
 			
 		}
 
