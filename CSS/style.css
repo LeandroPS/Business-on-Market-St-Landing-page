@@ -116,12 +116,20 @@ div.services-canvas{
 		position: relative;
 		margin-right: 30px;
 		float: right;
+		position: relative;
 		
 	}
 		div.services-canvas div.service-comment p{
 			padding: 35px 30px;
 			font-family: Open Sans, sans-serif;
+			width: 240px;
 			text-transform: uppercase;
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 0px 30px;
+			margin: 0px;
 			
 		}
 
@@ -136,6 +144,15 @@ div.services-canvas{
 				border-color: #000;
 				color: #7E1519;
 				
+			}
+
+			div.services-canvas div.service-comment p span.right{
+				float: right;
+			}
+
+			div.services-canvas div.service-comment p span.center{
+				text-align: center;
+				display: block;
 			}
 
 
