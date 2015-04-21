@@ -14,6 +14,7 @@ body{
 div.everything{
 	max-width: 900px;
 	margin: 0px auto;
+	overflow: auto;
 }
 
 div.quotes{
@@ -41,8 +42,10 @@ div.quotes{
 
 header{
 	height: 50px;
-	width: 100%;
+	width: 900px;
 	background-color: #fff;
+	position: fixed;
+	z-index: 2;
 }
 
 	header img{
@@ -68,7 +71,17 @@ header{
 			line-height: 50px;
 		}
 
+			header nav ul li a{
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+				header nav ul li a:hover{
+					text-decoration: underline;
+				}
+
 div.services-canvas{
+	margin-top: 50px;
 	width: 100%;
 	height: 375px;
 	background-color: blue;
@@ -90,14 +103,12 @@ div.services-canvas{
 
 div.services{
 	width: 100%;
-	height: 100px;
-	background-color: green;
 	overflow: auto;
 }
 
 	div.services ul{
 		padding: 0px;
-		margin: 10px 0px 0px 0px;
+		margin: 20px 0px 20px 0px;
 		display: flex;
 		display: -webkit-flex;
 		display: -moz-box;
@@ -115,8 +126,14 @@ div.services{
 			border-radius: 5px;
 			float: left;
 			position: relative;
-			
+			text-align: center;
+			margin-bottom: 23px;
+			cursor: pointer;
 		}
+
+			div.services ul li.current{
+				transform: scale(1.2);	
+			}
 
 			div.services ul li:after{
 				clear: both;
@@ -138,7 +155,7 @@ div.services{
 			}
 
 			div.services ul li.research{
-
+				background-color: #673AB7;
 			}
 
 				div.services ul li.research:after{
@@ -146,7 +163,7 @@ div.services{
 				}
 
 			div.services ul li.branding{
-
+				background-color: #2196F3;
 			}
 
 				div.services ul li.branding:after{
@@ -154,7 +171,7 @@ div.services{
 				}
 
 			div.services ul li.development{
-
+				background-color: #4CAF50;
 			}
 
 				div.services ul li.development:after{
@@ -162,7 +179,7 @@ div.services{
 				}
 
 			div.services ul li.business{
-
+				background-color: #607D8B;
 			}
 
 				div.services ul li.business:after{
@@ -170,15 +187,19 @@ div.services{
 				}
 
 			div.services ul li.marketing{
-
+				background-color: #FF9800;
 			}
 
 				div.services ul li.marketing:after{
 					content: "Marketing";
 				}
 
+				div.services ul li a{
+					line-height: 50px;
+  					font-size: 20pt;
+				}
+
 div.recent-works{
-	background-color: grey;
 	position: relative;
 	overflow: auto;
 	
@@ -201,9 +222,10 @@ div.recent-works{
 
 		div.recent-works>ul>li{
 			list-style: none;
-			background-color: darkblue;
+			background-color: #c0c0c0;
 			width: 200px;
 			float: left;
+			border-radius: 8px;
 		}
 
 			div.recent-works ul li img{
@@ -231,11 +253,36 @@ div.recent-works{
 					list-style: none;
 					background-color: red;
 					margin: 3px;
-					padding: 3px;
+					padding: 5px;
+					color: #fff;
+					font-family: Open Sans, sans-serif;
+					font-weight: 300;
 					display: inline-block;
 					float: left;
 					border-radius: 3px;
 				}
+
+
+					div.recent-works ul li ul li.research{
+						background-color: #673AB7;
+					}
+
+
+					div.recent-works ul li ul li.branding{
+						background-color: #2196F3;
+					}
+
+					div.recent-works ul li ul li.development{
+						background-color: #4CAF50;
+					}
+
+					div.recent-works ul li ul li.business{
+						background-color: #607D8B;
+					}
+
+					div.recent-works ul li ul li.marketing{
+						background-color: #FF9800;
+					}
 
 div.infographic{
 	width: 100%;
@@ -249,29 +296,46 @@ div.infographic{
 	}
 
 div.blog-multidisciplinary{
-	background-color: yellow;
+
 	overflow: hidden;
+	border-top: 3px solid;
+	padding: 5px;
 }
 
 	div.blog-multidisciplinary div.multidisciplinary{
-		background-color: blue;
+		background-color: #c0c0c0;
 		width:66%;
-		height: 200px;
+		height: 393px;
+		min-height: 200px;
 		float: left;
 		position: relative;
 	}
 
 		div.blog-multidisciplinary div.multidisciplinary div{
-			
+			width: calc(100% - 75px);
+			background: white;
+			margin: 35px;
+
 		}
 
+			div.blog-multidisciplinary div.multidisciplinary div p{
+				padding: 35px 30px;
+			}
+
 	div.blog-multidisciplinary div.blog{
-		background-color: red;
 		width: 33%;
-		height: 200px;
+		min-height: 200px;
 		position: relative;
 		float: right;
 	}
+
+
+		div.blog-multidisciplinary div.blog>h1{
+			position: relative;
+			margin: 15px;
+			font-family: Open Sans, sans-serif;
+			font-size: 16pt;
+		}
 
 		div.blog-multidisciplinary div.blog ul{
 			padding: 0px;
@@ -281,11 +345,43 @@ div.blog-multidisciplinary{
 
 			div.blog-multidisciplinary div.blog ul li{
 				list-style: none;
+				height: 100px;
+				/* border-color: grey; */
+				
+				padding: 5px 0px;
 			}
+
+				div.blog-multidisciplinary div.blog ul li:not(:last-child){
+					border-bottom: 2px solid;
+					border-color: grey;
+				}
+
+				div.blog-multidisciplinary div.blog ul li img{
+					background: grey;
+					height: 100px;
+					width: 100px;
+					float: left;
+					margin-left: 5px;
+					margin-right: 5px;
+					
+				}
+
+				div.blog-multidisciplinary div.blog ul li h1{
+					position: relative;
+					margin: 5px;
+					font-family: Open Sans, sans-serif;
+					font-size: 14pt;
+				}
+
+				div.blog-multidisciplinary div.blog ul li span.when{
+					font-family: Open Sans, sans-serif;
+					font-size: 10pt;
+				}
 
 footer{
 	background-color: #252625;
 	text-align: center;
+	overflow: hidden;
 }
 
 	footer img{
@@ -298,9 +394,15 @@ footer{
 	}
 
 	footer ul.social{
-		margin: 0px;
+		margin: 10px 0px 30px 0px;
+		padding: 0px;
+		overflow: hidden;
 	}
 
 		footer ul.social li{
-			
+			display: inline-block;
+			color: grey;
+			list-style: none;
+			font-size: 18pt;
+			margin: 5px;
 		}
