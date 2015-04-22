@@ -98,7 +98,7 @@ div.services-canvas{
 	div.services-canvas img{
 		width: 100%;
 		opacity: 0;
-		transition: opacity 1s;
+		transition: opacity 1.5s;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
